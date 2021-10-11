@@ -1,0 +1,9 @@
+{
+  "name": "@neat/ui",
+  "version": "1.0.0",
+  "description": "An ui library for React.",
+  "main": "dist/index.js",
+  "author": "JunwuHuang",
+  "license": "MIT",
+  "private": false
+}
