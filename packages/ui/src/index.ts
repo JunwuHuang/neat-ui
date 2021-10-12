@@ -1,2 +1,1 @@
-import Tag from "./Tag";
-export { Tag };
+export { default as Tag } from "./Tag";
