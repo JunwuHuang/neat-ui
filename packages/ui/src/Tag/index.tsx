@@ -13,9 +13,9 @@ const TagBase = styled.span<IProps>`
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
-  background-color: ${(props) => (props.checked ? '#fff1f0' : '#f5f5f5')};
-  border-color: ${(props) => (props.checked ? '#ffa39e' : '#d9d9d9')};
-  color: ${(props) => (props.checked ? ' #ff4d4f' : 'rgba(0, 0, 0, 0.65)')};
+  background-color: ${props => (props.checked ? '#fff1f0' : '#f5f5f5')};
+  border-color: ${props => (props.checked ? '#ffa39e' : '#d9d9d9')};
+  color: ${props => (props.checked ? ' #ff4d4f' : 'rgba(0, 0, 0, 0.65)')};
 `
 
 const Tag: FC<IProps> = ({ className, style, checked, onChange, children }) => {
