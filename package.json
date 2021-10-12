@@ -9,6 +9,18 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^16.10.3",
+    "@types/react": "^17.0.27",
+    "acorn-jsx": "^5.3.2",
+    "lerna": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.58.0",
+    "typescript": "^4.4.3"
   }
 }

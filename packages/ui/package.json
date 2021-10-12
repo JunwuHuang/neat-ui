@@ -5,5 +5,21 @@
   "main": "dist/index.js",
   "author": "JunwuHuang",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "build": "rollup -c ./build/rollup.config.js"
+  },
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "peerDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.2"
+  }
 }
