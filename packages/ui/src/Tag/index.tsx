@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import styled from '@emotion/styled'
-import type { IProps } from './types'
+import type { TagProps } from './types'
 
-const TagBase = styled.span<IProps>`
+const TagBase = styled.span<TagProps>`
   font-size: 12px;
   display: inline-block;
   padding-left: 8px;
@@ -18,7 +18,7 @@ const TagBase = styled.span<IProps>`
   color: ${props => (props.checked ? ' #ff4d4f' : 'rgba(0, 0, 0, 0.65)')};
 `
 
-const Tag: FC<IProps> = ({ className, style, checked, onChange, children }) => {
+const Tag: FC<TagProps> = ({ className, style, checked, onChange, children }) => {
   return (
     <TagBase
       className={className}

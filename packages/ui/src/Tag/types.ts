@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react'
 
-export interface IProps {
+export interface TagProps {
   className?: string
   style?: CSSProperties
   checked?: boolean
