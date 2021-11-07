@@ -5,6 +5,10 @@
   "author": "JunwuHuang",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "prettier": "prettier --write ."
+  },
   "workspaces": [
     "packages/*"
   ],
@@ -17,7 +21,10 @@
     "@types/node": "^16.10.3",
     "@types/react": "^17.0.27",
     "acorn-jsx": "^5.3.2",
+    "husky": "^7.0.2",
     "lerna": "^4.0.0",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.58.0",
