@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rollup -c ./build/rollup.config.js"
+    "build": "tsc"
   },
   "keywords": [
     "react",
