@@ -2,6 +2,7 @@ import jsx from 'acorn-jsx'
 import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import postcss from 'rollup-plugin-postcss'
 
 export default {
   input: './src/index.ts',
@@ -22,7 +23,8 @@ export default {
       ignoreGlobal: true,
       include: /node_modules/
     }),
-    typescript()
+    typescript(),
+    postcss()
   ],
   external: ['react']
 }
