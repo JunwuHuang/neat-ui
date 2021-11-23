@@ -9,7 +9,8 @@
   "scripts": {
     "start": "ts-node ./build/override-entry.ts",
     "prebuild": "ts-node ./build/override-entry.ts --env production",
-    "build": "npm run prebuild && rollup -c ./build/rollup.config.js",
+    "rollup": "rollup --config ./build/rollup.config.ts --configPlugin typescript",
+    "build": "npm run prebuild && npm run rollup",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

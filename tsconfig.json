@@ -1,5 +1,5 @@
 {
-  "include": ["types/*.d.ts", "packages/**/*.{ts,tsx}"],
+  "include": ["types/*.d.ts"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "strict": true,

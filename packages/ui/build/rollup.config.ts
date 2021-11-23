@@ -3,6 +3,7 @@ import typescript from '@rollup/plugin-typescript'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
+import * as postcssConfig from '../.postcssrc.json'
 
 export default {
   input: './src/index.ts',
@@ -17,14 +18,14 @@ export default {
   acornInjectPlugins: [jsx()],
   plugins: [
     nodeResolve({
-      extensions: ['.js', '.tsx', '.ts']
+      extensions: ['.js', '.tsx', '.ts', '.json']
     }),
     commonjs({
       ignoreGlobal: true,
       include: /node_modules/
     }),
     typescript(),
-    postcss()
+    postcss(postcssConfig)
   ],
   external: ['react']
 }

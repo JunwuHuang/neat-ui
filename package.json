@@ -8,7 +8,10 @@
   "scripts": {
     "prepare": "husky install",
     "prettier": "prettier --write .",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap --loglevel warn",
+    "prestart": "npm run bootstrap && npm run start:ui",
+    "start:ui": "lerna run --scope @sijilolai/neat-ui start --loglevel warn",
+    "start": "cd playground && npm run dev"
   },
   "workspaces": [
     "packages/*"
