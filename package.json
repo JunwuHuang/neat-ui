@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky install && chmod ug+x .husky/*",
     "prettier": "prettier --write .",
     "bootstrap": "lerna bootstrap --loglevel warn",
     "prestart": "npm run bootstrap && npm run start:ui",
