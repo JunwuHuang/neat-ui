@@ -1,12 +1,21 @@
 {
+  "include": ["types/*.d.ts", "packages/**/*.{ts,tsx}"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "allowJs": true,
+    "strict": true,
+    "allowJs": false,
     "target": "ES5",
     "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
+    "skipLibCheck": false,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["node", "react"],
     "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   }
 }
