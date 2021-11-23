@@ -3,3 +3,10 @@ node_modules
 
 # distributions
 dist
+dist-ssr
+
+# file system
+.DS_Store
+
+# dotenv file
+*.local
