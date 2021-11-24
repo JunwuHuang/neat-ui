@@ -1,0 +1,11 @@
+# npm dependences
+node_modules
+
+# distributions
+dist
+dist-ssr
+
+!*.js
+!*.jsx
+!*.ts
+!*.tsx
