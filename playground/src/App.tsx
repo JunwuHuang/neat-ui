@@ -1,7 +1,11 @@
-import { Tag } from '@sijilolai/neat-ui'
+import { Button } from '@sijilolai/neat-ui'
 
 function App() {
-  return <Tag>Test</Tag>
+  return (
+    <div>
+      <Button>Test</Button>
+    </div>
+  )
 }
 
 export default App
