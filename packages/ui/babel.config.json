@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/env",
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "useESModules": true
+      }
+    ]
+  ]
+}
