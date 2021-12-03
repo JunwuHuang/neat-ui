@@ -1,9 +1,4 @@
-import { ButtonHTMLAttributes, RefObject } from 'react'
-
-export interface ButtonRef extends RefObject<HTMLButtonElement> {
-  hi?: () => 'hi'
-}
-
+import { ButtonHTMLAttributes } from 'react'
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: 'default'
 }

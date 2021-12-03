@@ -1,4 +1,3 @@
-import jsx from 'acorn-jsx'
 import path from 'path'
 import { babel } from '@rollup/plugin-babel'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
@@ -6,7 +5,8 @@ import postcss from 'rollup-plugin-postcss'
 import * as postcssConfig from '../.postcssrc.json'
 
 const globals = {
-  react: 'React'
+  react: 'React',
+  'react-dom': 'ReactDOM'
 }
 
 const extensions = ['.js', '.tsx', '.ts', '.json']
@@ -20,7 +20,6 @@ export default {
     globals: globals
   },
   external: Object.keys(globals),
-  acornInjectPlugins: [jsx()],
   plugins: [
     nodeResolve({
       extensions

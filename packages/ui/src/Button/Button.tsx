@@ -1,22 +1,11 @@
-import {
-  forwardRef,
-  ForwardRefRenderFunction,
-  useRef,
-  useImperativeHandle
-} from 'react'
-import { ButtonRef, ButtonProps } from './types'
+import { FC, useEffect } from 'react'
+import { ButtonProps } from './types'
 
-const Button: ForwardRefRenderFunction<ButtonRef, ButtonProps> = (
-  props,
-  ref?
-) => {
-  const buttonRef = useRef<HTMLButtonElement>(null)
-
-  useImperativeHandle(ref, () => {
-    return buttonRef
-  })
-
-  return <button ref={buttonRef} {...props} />
+const Button: FC<ButtonProps> = ({ color, ...props }) => {
+  useEffect(() => {
+    console.log(color)
+  }, [color])
+  return <button {...props} />
 }
 
-export default forwardRef(Button)
+export default Button
