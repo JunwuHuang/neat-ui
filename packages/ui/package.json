@@ -3,13 +3,17 @@
   "version": "0.0.0-alpha.0",
   "description": "An ui library for React.",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "author": "JunwuHuang",
   "license": "MIT",
   "private": false,
   "scripts": {
     "start": "ts-node ./build/override-entry.ts",
     "prebuild": "ts-node ./build/override-entry.ts --env production",
-    "rollup": "rollup --config ./build/rollup.config.ts --configPlugin typescript",
+    "rollup": "npm-run-all rollup:umd rollup:esm rollup:cjs",
+    "rollup:umd": "cross-env BUNDLE_FORMAT=umd rollup --config ./build/rollup.config.js",
+    "rollup:esm": "cross-env BUNDLE_FORMAT=esm rollup --config ./build/rollup.config.js",
+    "rollup:cjs": "cross-env BUNDLE_FORMAT=cjs rollup --config ./build/rollup.config.js",
     "build": "npm run prebuild && npm run rollup",
     "prepublishOnly": "npm run build"
   },
