@@ -9,3 +9,6 @@ dist-ssr
 !*.jsx
 !*.ts
 !*.tsx
+
+# documents site
+documents

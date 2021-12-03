@@ -13,7 +13,7 @@
     "bootstrap": "lerna bootstrap --loglevel warn",
     "prestart": "npm run bootstrap && npm run start:ui",
     "start:ui": "lerna run --scope @sijilolai/neat-ui start --loglevel warn",
-    "start": "cd playground && npm start",
+    "start": "cd documents && npm start",
     "lint": "npm-run-all stylelint eslint",
     "build": "lerna run --scope @sijilolai/neat-ui build"
   },
@@ -55,6 +55,7 @@
     "react-dom": "^17.0.2",
     "rollup": "^2.58.0",
     "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
     "stylelint": "^14.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.1.2",
