@@ -10,7 +10,7 @@
     "prettier": "prettier --write .",
     "eslint": "eslint --fix .",
     "stylelint": "stylelint --fix **/*.{css,less}",
-    "bootstrap": "lerna bootstrap --loglevel warn",
+    "bootstrap": "lerna bootstrap --loglevel warn && cd documents && npm link ../node_modules/@sijilolai/neat-ui",
     "prestart": "npm run bootstrap && npm run start:ui",
     "start:ui": "lerna run --scope @sijilolai/neat-ui start --loglevel warn",
     "start": "cd documents && npm start",

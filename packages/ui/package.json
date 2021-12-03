@@ -2,7 +2,7 @@
   "name": "@sijilolai/neat-ui",
   "version": "0.0.0-alpha.0",
   "description": "An ui library for React.",
-  "main": "dist/index.js",
+  "main": "dist/node/index.js",
   "module": "dist/index.js",
   "author": "JunwuHuang",
   "license": "MIT",

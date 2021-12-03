@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const symlinks = require('./plugins/symlinks')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -112,7 +113,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme
       }
-    })
+    }),
+
+  plugins: [symlinks]
 }
 
 module.exports = config

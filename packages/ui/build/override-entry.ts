@@ -7,6 +7,10 @@ const CURRENT_FILENAME = basename(__filename, extname(__filename))
 
 const MAIN_FIELD_MAP = {
   development: 'src/index.ts',
+  production: 'dist/node/index.js'
+}
+const MODULE_FIELD_MAP = {
+  development: 'src/index.ts',
   production: 'dist/index.js'
 }
 
@@ -29,17 +33,21 @@ yargs
         throw new TypeError(describe)
       }
 
-      let field = MAIN_FIELD_MAP.development
+      let mainField = MAIN_FIELD_MAP.development
+      let moduleField = MODULE_FIELD_MAP.development
 
       if (env in MAIN_FIELD_MAP) {
-        field = MAIN_FIELD_MAP[<keyof typeof MAIN_FIELD_MAP>env]
+        mainField = MAIN_FIELD_MAP[<keyof typeof MAIN_FIELD_MAP>env]
+        moduleField = MODULE_FIELD_MAP[<keyof typeof MODULE_FIELD_MAP>env]
       }
 
       const packageJsonPath = resolve(__dirname, '../package.json')
 
       const packageJson = readFileSync(packageJsonPath, 'utf8')
 
-      const buildPackage = packageJson.replace(packageInfo.main, field)
+      const buildPackage = packageJson
+        .replace(packageInfo.main, mainField)
+        .replace(packageInfo.module, moduleField)
 
       writeFileSync(packageJsonPath, buildPackage)
     }
